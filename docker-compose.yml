@@ -18,7 +18,7 @@ services:
     environment:
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://service-discovery:8761/eureka/
     ports:
-      - "8100:8100"
+      - "8100:8080"
     networks:
       - ms-network
 
@@ -30,7 +30,7 @@ services:
     environment:
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://service-discovery:8761/eureka/
     ports:
-      - "8200:8200"
+      - "8200:8080"
     networks:
       - ms-network
 
