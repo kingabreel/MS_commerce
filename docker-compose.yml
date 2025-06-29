@@ -1,0 +1,51 @@
+version: '3.8'
+
+services:
+
+  service-discovery:
+    build: ./service_discovery
+    container_name: service-discovery
+    ports:
+      - "8761:8761"
+    networks:
+      - ms-network
+
+  products-api:
+    build: ./products_api
+    container_name: products-api
+    depends_on:
+      - service-discovery
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://service-discovery:8761/eureka/
+    ports:
+      - "8100:8100"
+    networks:
+      - ms-network
+
+  products-requester:
+    build: ./products_requester
+    container_name: products-requester
+    depends_on:
+      - service-discovery
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://service-discovery:8761/eureka/
+    ports:
+      - "8200:8200"
+    networks:
+      - ms-network
+
+  api-gateway:
+    build: ./api_gateway
+    container_name: api-gateway
+    depends_on:
+      - service-discovery
+    environment:
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://service-discovery:8761/eureka/
+    ports:
+      - "8765:8765"
+    networks:
+      - ms-network
+
+networks:
+  ms-network:
+    driver: bridge
