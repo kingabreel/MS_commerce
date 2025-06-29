@@ -1,0 +1,15 @@
+[submodule "products_api"]
+	path = products_api
+	url = https://github.com/kingabreel/MS_products-api.git
+
+[submodule "products_requester"]
+	path = products_requester
+	url = https://github.com/kingabreel/MS_products-requester.git
+
+[submodule "service_discovery"]
+	path = service_discovery
+	url = https://github.com/kingabreel/eureka.git
+
+[submodule "api_gateway"]
+	path = api_gateway
+	url = https://github.com/kingabreel/API-Gateway_Spring.git
