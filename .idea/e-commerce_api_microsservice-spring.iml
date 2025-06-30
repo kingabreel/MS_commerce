@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
-    <exclude-output />
-    <content url="file://$MODULE_DIR$" />
-    <orderEntry type="inheritedJdk" />
-    <orderEntry type="sourceFolder" forTests="false" />
+  <component name="AdditionalModuleElements">
+    <content url="file://$MODULE_DIR$" dumb="true">
+      <sourceFolder url="file://$MODULE_DIR$/api_gateway/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/api_gateway/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/api_gateway/target" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/products_api/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/products_api/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/products_api/src/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/products_requester/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/products_requester/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/products_requester/src/test" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/service_discovery/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/service_discovery/src/main/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/service_discovery/src/test" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/service_discovery/target" />
+    </content>
   </component>
 </module>
